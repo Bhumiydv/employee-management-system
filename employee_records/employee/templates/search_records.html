@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Search</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        body{
+            background-color: #bf6868
+        }
+        .topbar{
+            padding: 15px 20px;
+            background-color: maroon;
+            color: white;
+            font-size: 200%;
+            text-align: left;
+        }
+        .c1{
+        text-size-adjust: 1.5cap;
+       }
+       .c2{
+        font-size: large;
+        padding-top: 10px;
+       }
+       h1{
+        text-align: center;
+        color: #fff;
+        margin-top: 20px;
+        font-size: 40px;
+        text-decoration: underline overline;
+        text-underline-offset: 15px;
+       }
+       
+    </style>
+</head>
+<body>
+    <div class="topbar">
+        <div class="c1" style="float:left;">Dashboard</div>
+        <div class="c2" style="float:right;">Welcome Admin / <a href="{% url 'home' %}" style="color: white;"><i class="fa-regular fa-house"></i></a></div>
+        <div style="clear:both;"></div>
+    </div>
+    <h1>Search Records</h1>
+    
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Dashboard</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        body{
+            background-color: #bf6868
+        }
+        .topbar{
+            padding: 15px 20px;
+            background-color: maroon;
+            color: white;
+            font-size: 200%;
+            text-align: left;
+        }
+        .option{
+            height: 100px;
+            width: 1250px;
+            border: 2px solid none;
+            background-color: white;
+            margin: 10px;
+            border-radius: 1em;
+            padding: 10px 0 10px 20px;
+            font-size: 23px;
+            box-shadow: 0 4px 12px rgb(201, 146, 146);
+            text-align: center;
+            font-size: 170%;
+       }
+       table{
+        margin-top: 40px;
+        margin-left: 115px;
+       }
+       .option a{
+        border: 2px solid none;
+        padding: 6px 25px;
+        border-radius: 10px;
+        color: white;
+        background-color: rgb(132, 5, 5);
+        text-decoration: none;
+       }
+       
+       .c1{
+        text-size-adjust: 1.5cap;
+       }
+       .c2{
+        font-size: large;
+        padding-top: 10px;
+       }
+    </style>
+</head>
+<body>
+    <div class="topbar">
+        <div class="c1" style="float:left;">Dashboard</div>
+        <div class="c2" style="float:right;">Welcome Admin / <a href="{% url 'home' %}" style="color: white;"><i class="fa-regular fa-house"></i></a></div>
+        <div style="clear:both;"></div>
+    </div>
+    <table>
+        <tr>
+            <td>
+                <div class="option">
+                    Add Employee Record
+                    <br><br>
+                    <a href="{% url 'add_employee' %}">Go</a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="option">
+                    View Records
+                    <br><br>
+                    <a href="{% url 'view_records' %}">Go</a>
+               </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="option">
+                    View Feedbacks
+                    <br><br>
+                    <a href="{% url 'view_feedbacks' %}">Go</a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="option">
+                    Account
+                    <br><br>
+                    <a href="{% url 'account' %}">Go</a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="option">
+                    Logout
+                    <br><br>
+                    <a href="{% url 'logout' %}" onclick="return confirm('Are you sure?')">Go</a>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

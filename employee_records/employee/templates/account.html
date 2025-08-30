@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Account</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .topbar{
+            padding: 15px 20px;
+            background-color: maroon;
+            color: white;
+            font-size: 200%;
+            text-align: left;
+        }
+        .c1{
+        text-size-adjust: 1.5cap;
+       }
+       .c2{
+        font-size: large;
+        padding-top: 10px;
+       }
+       body{
+            background-color: #bf6868
+        }
+       .box{
+        border: 2px solid white;
+        height: 400px;
+        width: 450px;
+        margin-left: 520px;
+        margin-top: 130px;
+        background-color: white;
+        box-shadow: 0 4px 12px rgb(201, 146, 146);
+       }
+       h1{
+        text-align: center;
+        margin-top: 35px;
+        margin-bottom: 20px;
+       }
+       form{
+        padding-left: 70px;
+        justify-items: center;
+        justify-content: center;
+        align-items: center;
+       }
+       .input{
+        height: 25px;
+        width: 300px;
+        margin-bottom: 10px;
+        margin-top: 5px;
+       }
+       .btn{
+        height: 40px;
+        width: 307.5px;
+        font-size: medium;
+        color: white;
+        background-color: maroon;
+        text-align: center;
+        margin-top: 20px;
+       }
+    </style>
+</head>
+<body>
+    <div class="topbar">
+        <div class="c1" style="float:left;">Dashboard</div>
+        <div class="c2" style="float:right;">Welcome Admin / <a href="{% url 'home' %}" style="color: white;"><i class="fa-regular fa-house"></i></a></div>
+        <div style="clear:both;"></div>
+    </div>
+    <div class="box">
+        <h1>Change Password</h1>
+        <form method="post" onsubmit="check_password()" action="/change_pass">
+        {% csrf_token %}
+        <label for="cp" class="label">
+            Current Password<br>
+            <input type="password" name="cp" id="cp" class="input">
+        </label>
+        <br>
+        <label for="np" class="label">
+            New Password<br>
+            <input type="password" name="np" id="np" class="input">
+        </label>
+        <br>
+        <label for="cop" class="label">
+            Confirm Password<br>
+            <input type="password" name="cop" id="cop" class="input">
+        </label>
+        <br>
+        <input type="submit" value="Update Password" class="btn">
+    </form>
+    <script>
+        function check_password(){
+            let np=document.getElementById('np').value
+            let cop=document.getElementById('cop').value
+            if(np!=cop){
+                alert('New password and Confirm password does not match')
+                console.log('error')
+            }
+        }
+    </script>
+    </div>
+</body>
+</html>

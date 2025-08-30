@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>feedback</title>
+    <style>
+        .base{
+            background-image: url(https://t4.ftcdn.net/jpg/03/38/90/87/360_F_338908724_8Tfiyb0T3fd5Onk649ZrLUD9mHudWiJV.jpg);
+            background-repeat: no-repeat;
+            display: flex;
+            background-size: cover;
+            height: 100vh;
+            width: 100%;
+            color: white;
+        }
+        .div2{
+            border: 1px solid white;
+            height: 300px;
+            width: 310px;
+            background-color: white;
+            color: black;
+            margin-top: 50px;
+            margin-left: 540px;
+            padding: 45px;
+        
+        }
+        .div1{
+            font-size: 30px;
+            margin-left: 570px;
+            margin-top: 50px;
+            text-decoration: underline overline;
+            text-underline-offset: 15px;
+        }
+        .input{
+            width: 300px;
+            height: 30px;
+            margin-top: 4px;
+        }
+        .btn{
+            height: 40px;
+            width: 309px;
+            margin-top: 10px;
+            background-color: maroon;
+            color: white;
+            border-radius: 5px;
+            font-size: medium;
+        }
+        textarea{
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body>
+    {% include 'navigation.html' %}
+    <div class="base">
+        <div>
+            <div class="div1">
+                <h1>FEEDBACK</h1>
+            </div>
+            <div class="div2">
+                <form class="form" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <label for="name">Name<br>
+                        <input type="text" id="name" name="fname" placeholder="Name" class="input"><br><br>
+                    </label>
+                    <label for="email">Email<br>
+                        <input type="email" id="name" name="email" placeholder="Email" class="input"><br><br>
+                    </label>
+                    <label for="message">Message<br>
+                        <textarea id="message" placeholder="Message" name="message" cols="39" rows="4"></textarea><br><br>
+                    </label>
+                    <input type="submit" value="Done" class="btn">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

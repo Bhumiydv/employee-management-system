@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Home</title>
+    <style>
+        .main-div{
+            background-image: url(https://t4.ftcdn.net/jpg/03/38/90/87/360_F_338908724_8Tfiyb0T3fd5Onk649ZrLUD9mHudWiJV.jpg);
+            background-repeat: no-repeat;
+            display: flex;
+            background-size: cover;
+            height: 100vh;
+            width: 100%;
+        }
+        .base{
+            color: white;
+            margin-top: 100px;
+            margin-left: 100px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 20px;
+        }
+        a{
+            border: 1px solid white;
+            background-color: white;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .image{
+            height: 350px;
+            width: 650px;
+            border: 1px solid white;
+            margin-top: 100px;
+            background-image: url(https://www.michaelpage.co.in/sites/michaelpage.co.in/files/2021-05/employee%20engagement%20employee%20recognition%20970.jpg);
+            background-size:cover;
+            background-repeat: no-repeat;
+        }
+        </style>
+</head>
+<body>
+    {% include 'navigation.html' %}
+    <div class="main-div">
+        <div class="base">
+            <h1>Employee<br>Management<br>System</h1>
+            <br><br>
+            <h2>Monitor Workforce Productivity & Engagement</h2>
+            <br>
+            Get future-proof solutions to manage your distributed<br>workforce and improve organisational productivity
+            <br><br><br><br>
+            <a href="{% url 'login' %}">Get Started <i class="fa-solid fa-arrow-up-right-from-square fa-lg"></i></a>
+        </div>
+        <div class="image">
+
+        </div>
+    </div>
+</body>
+</html>
