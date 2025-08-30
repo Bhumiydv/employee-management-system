@@ -1,4 +1,4 @@
-# employee-management-system
+# Employee management system
 
 The **Employee Management System** is a Django-based web application designed to streamline the process of managing employee information within an organization. It provides administrators with tools for employee registration, record updates, secure authentication, and feedback management. The system enables efficient data handling, reduces manual paperwork, and ensures structured record-keeping.
 
